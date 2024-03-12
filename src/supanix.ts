@@ -3,9 +3,9 @@ const figlet = require('figlet');
 const { Command } = require('commander');
 const { exec } = require('child_process');
 const { yellow, red, cyan, blue, green } = require('kleur');
-console.log(cyan("Welcome to SUPANIX!"));
+console.log(green("Welcome to SUPANIX!"));
 
-console.log(green(figlet.textSync("SUPANIX")));
+console.log(green(figlet.textSync("Supanix")));
 
 const program = new Command();
 
@@ -19,8 +19,8 @@ program
             console.error(`exec error: ${err}`);
             return;
         }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
+        console.log(`${stdout}`);
+        console.error(`${stderr}`);
         }));
     });
 
