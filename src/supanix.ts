@@ -11,7 +11,7 @@ const program = new Command();
 
 program
   .command('build <flakeURL>')
-  .description('Run the nix build command on the system')
+  .description('Run the nix build command on the system with the flake URL as an argument')
   .action((flakeURL: string) => {
     // Execute the ls command using child_process.exec
     exec(`nix build ${flakeURL}`, ((err: Error | null, stdout: string, stderr: string) => {
